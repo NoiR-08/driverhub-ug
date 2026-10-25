@@ -1,0 +1,36 @@
+{
+    "name": "driverhub-ug",
+    "private": true,
+    "version": "0.0.0",
+    "engines": {
+        "node": "24.x"
+    },
+    "type": "module",
+    "scripts": {
+        "dev": "node --env-file-if-exists=.env scripts/dev.js",
+        "dev:frontend": "vite",
+        "dev:api": "node --env-file-if-exists=.env scripts/dev-api.js",
+        "migrate:mongodb": "node --env-file-if-exists=.env scripts/migrate-sqlite-to-mongo.js",
+        "build": "node scripts/build.js",
+        "lint": "oxlint",
+        "preview": "vite preview"
+    },
+    "dependencies": {
+        "mongodb": "^7.7.0",
+        "nodemailer": "^10.0.15",
+        "react": "^19.2.8",
+        "react-dom": "^19.2.8",
+        "react-router-dom": "^7.18.4"
+    },
+    "devDependencies": {
+        "@tailwindcss/vite": "^4.3.3",
+        "@types/node": "^24.13.3",
+        "@types/react": "^19.2.18",
+        "@types/react-dom": "^19.2.7",
+        "@vitejs/plugin-react": "^6.1.1",
+        "oxlint": "^1.81.0",
+        "tailwindcss": "^4.3.3",
+        "typescript": "~6.0.2",
+        "vite": "^8.3.0"
+    }
+}
